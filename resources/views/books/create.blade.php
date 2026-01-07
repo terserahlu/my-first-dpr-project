@@ -27,6 +27,10 @@
                 </select>
             </div>
             <div class="mb-3">
+                <label for="release_date" class="form-label">release_date</label>
+                <input type="date" name="release_date" class="form-control">
+            </div>
+            <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <textarea name="description" class="form-control"></textarea>
             </div>
