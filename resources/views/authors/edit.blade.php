@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit author</title>
+    <title>Edit Author</title>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f2f7ff;
+        }
+        .card {
+            border: none;
+            border-radius: 12px;
+        }
+        .card-header {
+            background-color: #5dade2;
+            color: white;
+            border-radius: 12px 12px 0 0;
+        }
+        .btn-primary {
+            background-color: #5dade2;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #3498db;
+        }
+        label {
+            font-weight: 500;
+        }
+    </style>
 </head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header text-center"></div>
 <body>
     <div class="container">
         <h1 class="text-center">Edit author</h1>
@@ -17,6 +48,10 @@
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" name="name" class="form-control" value="{{ $author->name }}">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" name="phone" class="form-control" value="{{ $author->phone }}">
             </div>
             <div class="mb-3">
                 <label for="birth_date" class="form-label">Birth date</label>

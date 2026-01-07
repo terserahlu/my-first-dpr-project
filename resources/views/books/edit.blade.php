@@ -32,6 +32,10 @@
                 <textarea name="description" class="form-control">{{ $book->description }}</textarea>
             </div>
             <div class="mb-3">
+                <label for="release_date" class="form-label">release_date</label>
+                <input type="date" name="release_date" class="form-control" value="{{ $book->release_date }}">
+            </div>
+            <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
                 <input type="file" name="image" class="form-control">
             </div>
