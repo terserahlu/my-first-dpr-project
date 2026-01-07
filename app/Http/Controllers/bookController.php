@@ -37,6 +37,7 @@ class bookController extends Controller
             'title' => 'required|string|max:255',
             'author_id' => 'required|exists:authors,id',
             'description' => 'required|string',
+            'release_date' => 'required|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         if($Validator->fails()){
@@ -47,6 +48,7 @@ class bookController extends Controller
             'title' => $request->title,
             'author_id' => $request->author_id,
             'description' => $request->description,
+            'release_date' => $request->release_date,
         ];
 
         if ($request->hasFile('image')) {
@@ -96,6 +98,7 @@ class bookController extends Controller
             'title' => 'required|string|max:255',
             'author_id' => 'required|exists:authors,id',
             'description' => 'required|string',
+            'release_date' => 'required|date',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         if($Validator->fails()){
@@ -106,6 +109,7 @@ class bookController extends Controller
             'title' => $request->title,
             'author_id' => $request->author_id,
             'description' => $request->description,
+            'release_date' => $request->release_date,
         ];
 
         if ($request->hasFile('image')) {
