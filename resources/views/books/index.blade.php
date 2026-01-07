@@ -20,6 +20,7 @@
                 <th class="text-center">Image</th>
                 <th class="text-center">Author</th>
                 <th class="text-center">Description</th>
+                <th class="text-center">release_date</th>
                 <th class="text-center">Action</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                     </td>
                     <td class="text-center">{{ $book->author->name ?? 'N/A' }}</td>
                     <td class="text-center">{{ $book->description }}</td>
+                    <td class="text-center">{{ $book->release_date}}</td>
                     <td>
                         <a class="btn btn-primary" href="{{ route('books.show', $book->id) }}">Show</a>
                         <a class="btn btn-warning" href="{{ route('books.edit', $book->id) }}">Edit</a>

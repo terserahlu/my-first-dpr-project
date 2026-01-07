@@ -32,6 +32,7 @@ class authorController extends Controller
     {
         $Validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
+            'phone' => 'nullable|numeric',
             'birth_date' => 'required|date',
             'description' => 'required|string',
         ]);
@@ -41,6 +42,7 @@ class authorController extends Controller
         $author = author::create(
             [
                 'name' => $request->name,
+                'phone' => $request->phone ,
                 'birth_date' => $request->birth_date,
                 'description' => $request->description,
             ]
@@ -84,6 +86,7 @@ class authorController extends Controller
 
         $Validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
+            'phone' => 'nullable|numeric',
             'birth_date' => 'required|date',
             'description' => 'required|string',
         ]);
@@ -93,6 +96,7 @@ class authorController extends Controller
         $author->update(
             [
                 'name' => $request->name,
+                'phone' => $request->phone,
                 'birth_date' => $request->birth_date,
                 'description' => $request->description,
             ]

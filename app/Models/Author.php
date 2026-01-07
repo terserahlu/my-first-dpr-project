@@ -10,6 +10,7 @@ class Author extends Model
     use SoftDeletes;
     protected $fillable = [
         'name',
+        'phone',
         'birth_date',
         'description',
     ];
